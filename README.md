@@ -16,7 +16,7 @@ The repo is in development but currently contains:
 3. XML schema files (under development!!!) and examples for lexicon-linked algorithmic encoding (in the **/Algorithmic-encoding** directory)
 
 ## Adding lexicon hyperlinks to your methods/results text (lexicon-linked free text format)
-We recommend that lexicon terminology is used in all DCE\DSC manuscripts and documentation to reduce variability in reporting. We also recommend that individual references to lexicon entries are linked directly to the webpage entry for that entry using a hyperlink. We are working on developing a tool that makes this process easier, but for the time-being these entries need to be added manually. The following steps need to be taken:
+We recommend that lexicon terminology is used in all DCE\DSC manuscripts and documentation to reduce variability in reporting. We also recommend that individual references to lexicon entries are linked directly to the webpage entry for that entry using a hyperlink. We are working on adding each items hyperlink to the lexicon tables so that they can be easily copied into your documents, but in the meantime please follow these instructions to determine the correct hyperlink for your quantity/model or process.
 
 1. Find the **a code**. Go to the relevant .md file for on **/docs** directory of main (e.g. quantities.md). Either open the file on github (and select *Code* tab) or open in your local repo in a text editor. Search for the entry of interest and find the ```<a name="..."></a>``` snippet for the entry of interest. This can be found in the OSIPI name column. An example is given below:
 
@@ -37,9 +37,12 @@ The lexicon is designed to the extensible and we actively engage researchers in 
 1. contact the task force leads (currently Ben Dickie (ben.dickie@manchester.ac.uk) or Rianne Van der Heijden (rvanderheijd@wisc.edu) with your proposed changes. These will be reviewed at the next Task Force meeting (usually monthly).
 2. OR create a development branch of main and edit the .md files directly. Once done, submit a pull request (do not merge with main!), which will then be reviewed by the Task Force.     
 
+
 ## Suggesting edits or additions to lexicon entries
 
-Edits or altogether new entries can be suggested by editing the .md files found within the **/docs** directory. To do this, make a new *development* branch of main and edit the .md files as necessary. Some basic instructions on how to edit markdown files are given here: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+Edits or altogether new entries to CAPLEX can be suggested by editing the .md files found within the **/docs** directory. To do this, fork the repo, create a new branch of main within your local forked copy, edit the .md files as necessary, then submit a pull request to merge your edits with the **OSIPI/OSIPI_CAPLEX:main-major-development**. Do no attempt to merge directly with **OSIPI/OSIPI_CAPLEX:main**.  We will use this development branch to collect commits. Once we have a sufficient number of new edits/commits to justify a new minor or major release, we will merge this branch with **main**, and register a new release of CAPLEX.  
+
+Some basic instructions on how to edit markdown files are given here: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 Below is an excerpt from the quantities.md file:
 
@@ -70,5 +73,5 @@ For example:
 Once done, commit the changes and submit a pull request. Make sure to add a description of the changes when making the pull request. 
 
 ## Deploying changes
-After careful review, proposed changes to markdown files made on a development branch will be merged into the *main* branch. After the merge is approved, this will trigger a CI workflow to automatically generate the new docs and publish to the *gh-pages* branch, **which should not be edited manually**.
+Proposed pull requests will be reviewed by the lexicon task force before being merged with **OSIPI/OSIPI_CAPLEX:main-major-development**. After the merge is approved, this will trigger a CI workflow to automatically generate a *preview* of CAPLEX. Once sufficient number of changes have been gathered on the development branch, we will merge **OSIPI/OSIPI_CAPLEX:main-major-development** with **OSIPI/OSIPI_CAPLEX:main** which will initiate a CI workflow to generate the webpage stored on the **gh-pages** branch. A new release will be issued at this point. The gh-pages branch **does not need to be edited manually at any point during this process**.
 
