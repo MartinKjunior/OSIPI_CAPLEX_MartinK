@@ -3,7 +3,7 @@
 
 
 ## <a name="Native R1 estimation"></a> Native R1 estimation
-The processes in this section describe commonly used methods to estimate the native relaxation rate *R<sub>10</sub>* from a given MR signal data set.
+The processes in this section describe commonly used analysis methods to estimate the native relaxation rate *R<sub>10</sub>* from a given MR signal data set.
 The resulting native relaxation rate can be used e.g. as input for the conversion from an electromagnetic property to indicator concentration.
 
 | Code | OSIPI name| Alternative names|Notation|Description|Reference|
